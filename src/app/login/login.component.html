@@ -1,0 +1,20 @@
+<div class="container w-100 h-100 d-flex justify-center align-center column">
+    <div class="title">Welcome to Notes App !</div>
+    <form class="w-50 d-flex justify-center align-center column">
+        <mat-form-field class="w-100 input">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" type="text">
+        </mat-form-field>
+
+        <mat-form-field class="w-100 input">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Username" type="password">
+        </mat-form-field>
+
+        <div class="button-container d-flex">
+            <button mat-raised-button color="primary" (click)="login()">Login</button>
+            <button mat-raised-button color="primary" (click)="loginAsGuest($event)">Login as Guest</button>
+            <button mat-raised-button color="accent" (click)="createNewAccount($event)">Create Account</button>
+        </div>
+    </form>
+</div>
