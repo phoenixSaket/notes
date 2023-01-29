@@ -3,18 +3,18 @@
     <form class="w-50 d-flex justify-center align-center column">
         <mat-form-field class="w-100 input">
             <mat-label>Username</mat-label>
-            <input matInput placeholder="Username" type="text">
+            <input matInput placeholder="Username" type="text" [value]="!!data.username ? data.username : ''" (change)="inputChanged($event, 'username')">
         </mat-form-field>
 
         <mat-form-field class="w-100 input">
             <mat-label>Password</mat-label>
-            <input matInput placeholder="Username" type="password">
+            <input matInput placeholder="Username" type="password" [value]="!!data.password ? data.password : ''" (change)="inputChanged($event, 'password')">
         </mat-form-field>
 
         <div class="button-container d-flex">
-            <!-- <button mat-raised-button color="primary" (click)="login()">Login</button> -->
+            <button mat-raised-button color="primary" (click)="login($event)">Login</button>
             <button mat-raised-button color="primary" (click)="loginAsGuest($event)">Login as Guest</button>
-            <!-- <button mat-raised-button color="accent" (click)="createNewAccount($event)">Create Account</button> -->
+            <button mat-raised-button color="accent" (click)="createNewAccount($event)">Create Account</button>
         </div>
     </form>
 </div>

@@ -1,1 +1,20 @@
-<p>create-new-account works!</p>
+<div class="container w-100 h-100 d-flex justify-center align-center column">
+    <div class="title">Create New Account</div>
+    <form class="w-50 d-flex justify-center align-center column">
+        <mat-form-field class="w-100 input">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" type="text" (change)="inputChanged($event, 'username')">
+        </mat-form-field>
+
+        <mat-form-field class="w-100 input">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Username" type="password" (change)="inputChanged($event, 'password')">
+        </mat-form-field>
+
+        <div class="button-container d-flex">
+            <button mat-raised-button color="primary" (click)="create()">Create Account</button>
+            <button mat-raised-button color="accent" (click)="cancel($event)">Cancel</button>
+            <!-- <button mat-raised-button color="accent" (click)="createNewAccount($event)">Create Account</button> -->
+        </div>
+    </form>
+</div>

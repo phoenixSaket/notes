@@ -2,11 +2,12 @@
     position: sticky;
     top: 15px;
     border-radius: 10px;
-    /* padding: 20px 5px; */
-    height: 94vh;
+    padding: 20px 0px;
+    height: calc(100vh - 20px);
     width: 60px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
     background-color: var(--white);
@@ -35,37 +36,25 @@ mat-icon:hover {
 .text {
     position: absolute;
     top: 6px;
-    right: -94px;
+    right: -95px;
     display: flex;
-    width: 80px;
+    width: 0px;
     height: 75%;
     font-weight: 700;
     justify-content: center;
     align-items: center;
-    display: none;
     transition-duration: 200ms;
     transition-delay: 200ms;
-    transition-property: all;
-    padding: 10px 25px;
+    padding: none;
     background-color: var(--blue);
     color: var(--white);
     border-radius: 2px 7px 7px 2px;
+    visibility: hidden;
+    clip-path: polygon(15% 0, 100% 0, 100% 99%, 15% 99%, 0 50%);
+    padding-left: 15%;
 }
 
-.triangle {
-    position: absolute;
-    display: none;
-    top: 6px;
-    right: -15px;
-    transition-duration: 200ms;
-    transition-delay: 200ms;
-    transition-property: all;
-    background-color: var(--blue);
-    width: 20px;
-    height: 75%;
-    clip-path: polygon(20px 0, 0px 50%, 20px 100%);
-}
-
-.item:hover .text, .item:hover .triangle  {
-    display: block;
+.item:hover .text {
+    width: 100px;
+    visibility: visible;
 }
