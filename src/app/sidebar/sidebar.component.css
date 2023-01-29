@@ -1,0 +1,71 @@
+.sidebar {
+    position: sticky;
+    top: 15px;
+    border-radius: 10px;
+    /* padding: 20px 5px; */
+    height: 94vh;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--white);
+}
+
+mat-icon {
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+mat-icon:hover {
+    color: var(--blue);
+    transform: scale(2);
+    transition-duration: 200ms;
+    font-weight: 700;
+}
+
+.item {
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    top: 6px;
+    right: -94px;
+    display: flex;
+    width: 80px;
+    height: 75%;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition-duration: 200ms;
+    transition-delay: 200ms;
+    transition-property: all;
+    padding: 10px 25px;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 2px 7px 7px 2px;
+}
+
+.triangle {
+    position: absolute;
+    display: none;
+    top: 6px;
+    right: -15px;
+    transition-duration: 200ms;
+    transition-delay: 200ms;
+    transition-property: all;
+    background-color: var(--blue);
+    width: 20px;
+    height: 75%;
+    clip-path: polygon(20px 0, 0px 50%, 20px 100%);
+}
+
+.item:hover .text, .item:hover .triangle  {
+    display: block;
+}
